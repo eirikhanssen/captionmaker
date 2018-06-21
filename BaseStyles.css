@@ -47,3 +47,23 @@ b, strong, .bold, h1, h2, h3, h4, h5, h6
 {
     font-weight: 600;
 }
+
+code {
+    display: block; font-family: Consolas, Monospace; font-size: 14px; color: Black; text-indent: -4em; padding: 0 0.25em;
+}
+
+.info {display:none;}
+
+.fieldset-groups {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.fieldset-group {
+    border-radius: .5em;
+    flex-grow: 1;
+    max-width: 50%;
+}
+
+label {font-weight: bold; color:#555;}

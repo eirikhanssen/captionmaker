@@ -82,7 +82,7 @@ var _om_gbls = {
 		s.prop3=s.eVar3=s.events="";
 	},
 	logError : function(e,txt) {
-		console.log("c1="escape(txt) + "&c2=" + escape(e.name) + "&c3=" + escape(e.message) + "&events=event1&v1=D%3DUser-Agent");
+		console.log("c1=" + escape(txt) + "&c2=" + escape(e.name) + "&c3=" + escape(e.message) + "&events=event1&v1=D%3DUser-Agent");
 	}
 }
 
@@ -418,19 +418,5 @@ c=s_d(c);if(e>0){a=parseInt(i=v.substring(e+5));if(a>3)a=parseFloat(i)}else if(m
 try {
 	s.t();
 } catch(e) {
-	_om_gbls.logError(e,"error in s.t call");
-}
-
-function recruit() {
-    var recruitMessages = [ "Do you come here often?\r\n If so, we'd love to talk about opportunities on the IE team:",
-                                                    "Want to work on the next IE feature we showcase here? ",
-                                                    "if (jobOnTheIETeam instanceof Awesome) location.href = ",
-                                                    "HTTP/307 Redirect - Check out job opportunities with the IE team: "];
-													
-	if(console && console.log) {
-		console.log(recruitMessages[Math.floor(Math.random()*recruitMessages.length)] + "\r\n http://www.microsoft-careers.com/go/internet-explorer/340041/");
-	}
-}
-if(window.addEventListener) {
-	window.addEventListener("load", recruit);
+	console.log(e,"error in s.t call");
 }
