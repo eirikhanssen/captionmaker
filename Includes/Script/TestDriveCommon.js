@@ -82,10 +82,7 @@ var _om_gbls = {
 		s.prop3=s.eVar3=s.events="";
 	},
 	logError : function(e,txt) {
-		var sourceURL="http://microsoftwindows.112.2o7.net/b/ss/mswindowsie9tderr/1/H.20.2--NS/0";
-		sourceURL += "?c1="+escape(txt)+"&c2="+escape(e.name)+"&c3="+escape(e.message)+"&events=event1&v1=D%3DUser-Agent";
-		var debugImage = new Image();
-		debugImage.src = sourceURL;
+		console.log("c1="escape(txt) + "&c2=" + escape(e.name) + "&c3=" + escape(e.message) + "&events=event1&v1=D%3DUser-Agent");
 	}
 }
 
