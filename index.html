@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Copyright � Microsoft Corporation. All Rights Reserved. -->
+    <!-- Demo Author: Jay Munro, Microsoft Corporation -->
+    <!-- Written by Jay Munro -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>HTML5 Video Caption Maker (modified)</title>
+    <script type="text/javascript">
+        (function () {
+            var m = window.navigator.userAgent.match(/\bMSIE\s+(\d+)/);
+            if (m)
+                document.getElementsByTagName("html")[0].setAttribute("class", "ie" + m[1]);
+        })();
+    </script>
+    <link href="BaseStyles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Includes/Styles/DemoTemplate.css" />
+    <link rel="stylesheet" type="text/css" href="Includes/Styles/ReturnAndShareControls.css" />
+    <link rel="stylesheet" type="text/css" href="Demo.css" />
+    <link rel="shortcut icon" href="Includes/Image/FavIcon.ico" />
+</head>
+<body onload="init();">
+    <div id="ReturnAndShareControls">
+    </div>
+    <h1 id="DemoTitle">
+        HTML5 Video Caption Maker
+    </h1>
+    <div id="DemoScreenreaderText">
+        Caption Maker lets you view a video and define captions for scenes between in and
+        out points. Once you've created a caption list, you can save it to a WebVTT or TTML
+        format file which can be used in Internet Explorer 10. You can preview the caption
+        file with the video from within Caption Maker, or create yourself an HTML5 webpage
+        that uses the track tag.
+    </div>
+    <div id="DemoIntroduction">
+        <p>
+            This demo allows you to create simple video caption files. Start by loading a video in a format your browser can play. Then alternately play and pause the video, entering a caption for each segment.</p>
+            <p>If you have a saved WebVTT or TTML caption file for your video, you may load it, edit the text of existing segments, or append new segments.</p>
+        <p id='warning' style='display: none'>
+            This demo requires a browser that supports the HTML5 &lt;video&gt; element, e.g.,
+            Internet Explorer 9 or later.</p>
+    </div>
+    <div id="DemoContent">
+        <table class="innerLayout" style="margin-bottom: 12px;">
+            <tr>
+                <td>
+                    <label for="videoURL">
+                        Enter URL of video file:</label>
+                </td>
+                <td>
+                    <input type="text" id="videoURL" maxlength="2083" />
+                </td>
+            	<td>
+            		&nbsp;
+            		<button id="loadVideoFromUrl">
+            			Load</button>
+            		<button id="loadSampleVideo" style="margin-left: 2em;">
+            			Load Sample</button>
+            	</td>
+                <td class="browseForVideoFile" style="padding-left: 1em; padding-right: 0.5em;">
+                    or...
+                </td>
+				<td class="browseForVideoFile">
+                    <label for="videoFile">
+                        Choose video file:</label>
+                </td>
+                <td class="browseForVideoFile">
+                    <input type="file" id="videoFile" accept="video/mp4, video/webm" />
+                </td>
+            </tr>
+            <tbody class="grayNoVideo">
+                <tr id="loadCaptionFileLinkRow">
+                    <td colspan="6">
+                        <a href="#" onmousedown="document.getElementById('captionFileRow').className='';document.getElementById('loadCaptionFileLinkRow').style.display='none';"
+                           onclick="return false;">Load Existing Caption File [optional]</a>
+                    </td>
+                </tr>
+                <tr id="captionFileRow" class="hidden">
+                    <!--<td>
+                        <label for="ttURL">
+                            Enter URL of caption file:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="ttURL"  maxlength="2083"/>
+                    </td>
+                	<td>
+                		&nbsp;
+                		<button id="loadCaptionFileFromUrl">
+                			Load</button>
+                		<button id="loadSampleCaptionFile" style="margin-left: 2em;">
+                			Load Sample</button>
+                	</td>
+                    <td class="browseForCaptionFile" style="padding-left: 1em; padding-right: 0.5em;">
+                        or...
+                    </td>
+					<td class="browseForCaptionFile">
+                        <label for="ttFile">
+                            Choose caption file:</label>
+                    </td>-->
+                    <td class="browseForCaptionFile">
+                        <input type="file" id="ttFile" accept="text/vtt, application/ttml+xml" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="grayNoVideo">
+        <div style="display: inline-block; float: left; margin-right: 2%; min-height: 425px;
+            width: 49%;">
+            <div style="padding-bottom: 4px;">
+                Video:</div>
+            <video id="videoElm"><div class="videoError">HTML5 video is not supported</div></video>
+            <div id="videoError" class="videoError">
+            </div>
+            <div id="captionTitle">
+                &nbsp;</div>
+            <div>
+                <textarea id="textCaptionEntry"></textarea>
+            </div>
+        	<div style="margin-top: 6px; text-align: center;">
+        		<div style="display: inline-block; margin-left: auto; margin-right: auto;">
+        		<button id="playButton">
+        			Play</button>
+        		<button id="pauseButton" style="margin-left: 2em;">
+        			Pause</button>
+        		<button id="justSaveCaption" style="margin-left: 2em;">
+        			Save</button>
+        			<button id="saveCaptionAndPlay" style="margin-left: 2em;">
+        				Save &amp; Continue</button>
+						</div>
+        	</div>
+        </div>
+        <div style="display: inline-block; float: left; width: 49%;">
+            <div style="padding-bottom: 4px;">
+                Caption list:</div>
+            <div id="display">
+            </div>
+            <div style="margin-top: 6px;"><button id="clearAllCaptions">Clear All</button></div>
+        </div>
+        <div style="clear: both; padding-top: 24px;">
+            Choose caption file format:
+            <input type="radio" name="captionFormat" id="captionFormatTTML" style="margin-left: 0.5em;" />
+            <label for="captionFormatTTML">
+                TTML</label>
+            <input type="radio" name="captionFormat" id="captionFormatVTT" style="margin-left: 0.5em;" />
+            <label for="captionFormatVTT">
+                WebVTT</label>
+            <input type="radio" name="captionFormat" id="captionFormatNone" style="margin-left: 0.5em;" />
+            <label for="captionFormatNone">
+                Hide caption file display</label>
+        </div>
+            <div id="captionFileAndMarkup" style="padding-top: 24px; padding-bottom: 24px;">
+                <div style="padding-bottom: 4px;">
+                    Select and copy the caption file contents below and paste into a <span id="captionFileKind">
+                                                                                         .vtt</span> file<span id="saveToDiskAdvice"> or save it to a file using the �Save to File� button
+                                                                                                             below</span>:
+                </div>
+                <div>
+                    <textarea id="captionFile" style="width: 100%;" rows="12" readonly="readonly"></textarea></div>
+                <div style="padding-top: 6px;">
+                    <button id="blobBuilderSave" style="margin-right: 2em;">
+                        Save to File</button>
+                    <button id="copyToClipboard">
+                        Copy to Clipboard</button>
+                </div>
+                <div style="padding-top: 24px;">
+                    <div style="padding-bottom: 4px;">
+                        HTML5 &lt;video&gt; element with &lt;track&gt; element markup:</div>
+                	<div id="trackCodeSyntax">
+                		<code style="display: block; font-family: Consolas, Monospace; font-size: 14px; color: Black; text-indent: -4em; padding: 0 0.25in;"><div style="background-color: #f0f0f0; padding: 0 4px 2px 4px;">
+<p style="padding: 0; margin: 0 0 0 4em;"><span style="color: Blue;">&lt;</span><span style="color: Maroon;">video</span> <span style="color: Red;">controls</span> <span style="color: Red;">src</span><span style="color: Blue;">=&quot;<span id="markupVideoSrc"></span>&quot;&gt;</span></p>
+<p style="padding: 0; margin: 0 0 0 6em;"><span style="color: Blue;">&lt;</span><span style="color: Maroon;">track</span> <span style="color: Red;">kind</span><span style="color: Blue;">=&quot;captions&quot;</span> <span style="color: Red;">src</span><span style="color: Blue;">=&quot;<span id="markupCaptionSrc"></span>&quot;</span> <span style="color: Red;">srclang</span><span style="color: Blue;">=&quot;en-us&quot;</span> <span style="color: Red;">label</span><span style="color: Blue;">=&quot;English&quot;</span> <span style="color: Blue;">/&gt;</span></p>
+<p style="padding: 0; margin: 0 0 0 4em;"><span style="color: Blue;">&lt;/</span><span style="color: Maroon;">video</span><span style="color: Blue;">&gt;</span></p>
+</div></code>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="DemoDetails" style="padding-bottom: 0.5in;">
+        This demo supports subsets of the <a href="http://www.w3.org/TR/ttaf1-dfxp/" target="_blank">
+            W3C TTML 1.0 Recommendation</a> and the rapidly evolving <a href="http://dev.w3.org/html5/webvtt/"
+                target="_blank">WebVTT file format</a>. The supported subsets match those
+        supported for playback in Internet Explorer 10.</div>
+    <!-- end of demo content -->
+    <!--<script src="https://ajax.Microsoft.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"> </script>-->
+    <script src="jquery-3.3.1.min.js" type="text/javascript"> </script>
+    <script src="demo.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="Includes/Script/TestDriveCommon.js"> </script>
+    <script type="text/javascript" src="Includes/Script/ReturnAndShareControls.js"> </script>
+</body>
+</html>

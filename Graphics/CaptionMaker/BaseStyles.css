@@ -1,0 +1,49 @@
+﻿html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: 'Segoe UI' , Verdana, Helvetica, Sans-Serif;
+    font-size: 14px;
+    height: 100%;
+    background-color: white;
+    color: #333;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+p
+{
+    padding-bottom: 1em;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a, a:visited, a:hover
+{
+    color: #00a3ef;
+}
+
+a:hover, a:visited:hover
+{
+    color: #00a3ef;
+    text-decoration: underline;
+}
+
+b, strong, .bold, h1, h2, h3, h4, h5, h6
+{
+    font-weight: 600;
+}
