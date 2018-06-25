@@ -20,25 +20,50 @@
 <body onload="init();">
     <main>
         <div id="ReturnAndShareControls"></div>
-        <h1 id="DemoTitle">HTML5 Video Caption Maker</h1>
+       <!-- <h1 id="DemoTitle">HTML5 Video Caption Maker</h1> -->
         <div id="DemoContent">
-            <div class="cols">
+            <div class="cols load">
                 <fieldset>
                     <legend>load media</legend>
                     <div class="fieldset-groups">
-                        <div class="fieldset-group">
-                            <label for="videoURL">From URL:</label>
-                            <input type="text" id="videoURL" maxlength="2083" />
+                            <div class="flexr">
+                                    <script>
+                                        window.addEventListener('load',function(){
+                                            var audioloader = document.querySelector('#audioloader');
+                                            var createOption = function(num, letter) {
+                                                if(num < 10) {
+                                                    num = String('0'+num);
+                                                }
+                                                var content = 'NO_' + num + letter;
+                                                var value = "http://lumbrikus.no/media/audio/ogg_64k/" + content + ".ogg";
+                                                var option = document.createElement('OPTION');
+                                                option.setAttribute('value',value);
+                                                option.innerHTML=content;
+                                                return option;
+                                            }
+        
+                                            for(var i=0; i<=11; i++) {
+                                                audioloader.appendChild(createOption(i,'K'));
+                                                audioloader.appendChild(createOption(i,'L'));
+                                            }
+                                            function loadMediaUrl(){
+                                                var videoURL = document.querySelector('#videoURL');
+                                                videoURL.value = audioloader.value;
+                                            }
+                                            audioloader.addEventListener('change',loadMediaUrl,false);
+                                        },false);
+                                    </script>
+                            <label for="videoURL">URL:</label>
+                            <select id="audioloader"></select>
+                            <input type="text" id="videoURL" maxlength="2083" style="flex-grow: 1;"/>
                             <button id="loadVideoFromUrl">Load</button>
                         </div>
                         <!--.fieldset-group-->
-                        <div class="fieldset-group">
-                            <label for="videoFile">From disk:</label>
+                        <div class="fieldset-group" style="display:none;">
+                            <label for="videoFile">Disk:</label>
                             <input type="file" id="videoFile" accept="video/mp4, video/webm" />
                         </div>
-                        <!--.fieldset-group-->
-                    </div>
-                    <!--.fieldset-groups-->
+                    </div><!--.fieldset-groups-->
 
                 </fieldset>
 
@@ -46,16 +71,17 @@
                 <fieldset>
                     <legend>load caption file (optional)</legend>
                     <div class="fieldset-groups">
-                        <div class="fieldset-group">
-                            <label for="ttURL">From URL:</label>
-                            <input type="text" id="ttURL" maxlength="2083" />
-                            <button id="loadCaptionFileFromUrl">Load</button>
-                        </div>
-                        <!--.fieldset-group-->
-                        <div class="fieldset-group">
-
-                            <label for="ttFile">From disk:</label>
-                            <input type="file" id="ttFile" value="hei" accept="text/vtt, application/ttml+xml" />
+                        <div class="flexr">
+                            <div class="cols">
+                                <div class="col" style="display: flex; flex-flow: row-wrap;">
+                                    <label for="ttURL">URL:</label>
+                                    <input type="text" id="ttURL" maxlength="2083" style="flex-grow:1;"/>
+                                    <button id="loadCaptionFileFromUrl" style="margin-left: 3px;">Load</button></div>
+                                <div class="col">
+                                    <label for="ttFile">Disk:</label>
+                                    <input type="file" id="ttFile" value="hei" accept="text/vtt, application/ttml+xml" /></div>
+                            </div>
+                            
                         </div>
                         <!--.fieldset-group-->
                     </div>
@@ -65,38 +91,42 @@
             <div class="cols work-area">
                 <section class="media">
                     <h2>Media</h2>
-                    <video id="videoElm"></video>
+                    
+                    <div id="textloader">
+                        <textarea id="textloader_source"></textarea>
+                        <button id="textloader_button">Load text for sync</button>
+                        <div id="textloader_subs">
+                            <ul id="loader"><li>sample</li><li>line</li></ul>
+                        </div>
+                        <video id="videoElm"></video>
+                    </div>
                     <div id="captionTitle"></div>
                     <textarea id="textCaptionEntry"></textarea>
                     <fieldset>
                         <legend>Media Controls</legend>
                         <div class="cols">
                             <div class="fieldset-group-center">
-                                <button class="speed" data-speed=".5" title="speed: 0.5">
-                                    <i class="material-icons">directions_walk</i>
-                                </button>
-                                <button class="speed" data-speed="1" title="speed: 1">
-                                    <i class="material-icons">directions_run</i>
-                                </button>
-                                <button class="speed" data-speed="1.5" title="speed: 1.5">
-                                    <i class="material-icons">directions_bike</i>
-                                </button>
-                                <button class="speed" data-speed="2" title="speed: 2">
-                                    <i class="material-icons">directions_car</i>
-                                </button>
+                                <button class="speed" data-speed=".5" title="speed: 0.5">0.5</button>
+                                <button class="speed" data-speed="1" title="speed: 1">1.0</button>
+                                <button class="speed" data-speed="1.5" title="speed: 1.5">1.5</button>
+                                <button class="speed" data-speed="2" title="speed: 2">2.0</button>
+                                <button class="speed" data-speed="2.5" title="speed: 2.5">2.5</button>
+                                <button class="speed" data-speed="3" title="speed: 3">3.0</button>
+                                <button class="speed" data-speed="3" title="speed: 3.5">3.5</button>
+                                <button class="speed" data-speed="3" title="speed: 4">4.0</button>
                             </div>
                             <!--.fieldset-group-center-->
                             <div class="fieldset-group-center">
-                                <button id="playButton">
+                                <button id="playButton" title="Play media">
                                     <i class="material-icons">play_arrow</i>
                                 </button>
-                                <button id="pauseButton">
+                                <button id="pauseButton" title="Pause media">
                                     <i class="material-icons">pause</i>
                                 </button>
-                                <button id="justSaveCaption">
+                                <button id="justSaveCaption" title="Save cue">
                                     <i class="material-icons">fiber_new</i>
                                 </button>
-                                <button id="saveCaptionAndPlay">
+                                <button id="saveCaptionAndPlay" title="Save cue and continue - [|] key">
                                     <i class="material-icons">fiber_new</i>
                                     <i class="material-icons">replay</i>
                                 </button>
@@ -114,9 +144,7 @@
                     <fieldset>
                         <legend>Caption Controls</legend>
                         <div class="flexr-end">
-                            <button id="clearAllCaptions" title="clear all">
-                                <i class="material-icons">clear</i>
-                            </button>
+                            <button id="clearAllCaptions" title="clear all">Clear all <i class="material-icons">clear</i></button>
                         </div>
 
                     </fieldset>
@@ -144,6 +172,8 @@
         <!--DemoContent-->
 
     </main>
+
+    
     <!-- end of demo content -->
     <!--<script src="https://ajax.Microsoft.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"> </script>-->
     <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -151,6 +181,7 @@
     <script type="text/javascript" src="Includes/Script/TestDriveCommon.js"></script>
     <script type="text/javascript" src="Includes/Script/ReturnAndShareControls.js"></script>
     <script type="text/javascript" src="speedcontrols.js"></script>
+    <script type="text/javascript" src="textloader.js"></script>
 </body>
 
 </html>
