@@ -2216,7 +2216,8 @@ $– Frø er viktigst.
 $Derfor må menneskene ikke ødelegge frø. 
 $På vår planet Mo-lo ødelegger vi ikke frø. 
 $Våre frø er vennene våre.
-¶$Men på jorda er det mennesker som har funnet ut hvordan de kan ødelegge frøene.
+¶$Men på jorda er det mennesker som har funnet ut 
+$hvordan de kan ødelegge frøene.
 ¶$– Hvorfor ødelegger noen på jorda frø? 
 $spurte Jenny.
 ¶$– Fordi de selger frø. 
