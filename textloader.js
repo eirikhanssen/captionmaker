@@ -1,5 +1,5 @@
 function textloader(){
-    console.log('textloader');
+    //console.log('textloader.js');
     var textCaptionEntry = document.querySelector('#textCaptionEntry');
     var pauseButton = document.querySelector('#pauseButton');
     var textloader_source = document.querySelector('#textloader_source');
@@ -7,15 +7,21 @@ function textloader(){
     var loader_list = document.querySelector('#loader');
     var txt_source = document.querySelector('#textloader_source');
     
-
     function loadTextLine(el) {
+        pauseButton.click();
+        //console.log('loadTextLine()');
         var subtitle = el.innerHTML;
         $(el).addClass('added');
-        var prevPrev = el.previousElementSibling.previousElementSibling;
+        try {
+            var prevPrev = el.previousElementSibling.previousElementSibling;
+        } catch(err) {
+           // console.log(err.message);
+        }
+        
         if(prevPrev) {
             $(prevPrev).addClass('hide');
         }
-        pauseButton.click();
+        
         window.setTimeout(function(){textCaptionEntry.value = subtitle;},200);
     }
 
@@ -26,17 +32,17 @@ function textloader(){
     }
 
     function loaderInit() {
-        console.log('loaderInit()');
+        //console.log('loaderInit()');
         var loader_list = document.querySelector('#loader');
         loader_list.innerHTML="";
         var txt_source_array = txt_source.value.split("\n");
-        console.log(txt_source);
-        console.log(txt_source_array);
+        //console.log(txt_source);
+        //console.log(txt_source_array);
         var line_contents;
         for(var j=0; j < txt_source_array.length; j++) {
             line_contents = String(txt_source_array[j]);
             if(line_contents.match(/^\s*$/)===null) {
-                console.log(line_contents);
+                //console.log(line_contents);
                 loader_list.appendChild(create_line(line_contents));
             } else {}
         }
@@ -51,6 +57,7 @@ function textloader(){
     }
 
     textloader_button.addEventListener('click',loaderInit, false);
+    
 }
 window.addEventListener('load',textloader,false);
 

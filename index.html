@@ -26,33 +26,7 @@
                 <fieldset>
                     <legend>load media</legend>
                     <div class="fieldset-groups">
-                            <div class="flexr">
-                                    <script>
-                                        window.addEventListener('load',function(){
-                                            var audioloader = document.querySelector('#audioloader');
-                                            var createOption = function(num, letter) {
-                                                if(num < 10) {
-                                                    num = String('0'+num);
-                                                }
-                                                var content = 'NO_' + num + letter;
-                                                var value = "http://lumbrikus.no/media/audio/ogg_64k/" + content + ".ogg";
-                                                var option = document.createElement('OPTION');
-                                                option.setAttribute('value',value);
-                                                option.innerHTML=content;
-                                                return option;
-                                            }
-        
-                                            for(var i=0; i<=11; i++) {
-                                                audioloader.appendChild(createOption(i,'K'));
-                                                audioloader.appendChild(createOption(i,'L'));
-                                            }
-                                            function loadMediaUrl(){
-                                                var videoURL = document.querySelector('#videoURL');
-                                                videoURL.value = audioloader.value;
-                                            }
-                                            audioloader.addEventListener('change',loadMediaUrl,false);
-                                        },false);
-                                    </script>
+                        <div class="flexr">
                             <label for="videoURL">URL:</label>
                             <select id="audioloader"></select>
                             <input type="text" id="videoURL" maxlength="2083" style="flex-grow: 1;"/>
@@ -181,6 +155,7 @@
     <script type="text/javascript" src="Includes/Script/TestDriveCommon.js"></script>
     <script type="text/javascript" src="Includes/Script/ReturnAndShareControls.js"></script>
     <script type="text/javascript" src="speedcontrols.js"></script>
+    <script type="text/javascript" src="sourceloader.js"></script>
     <script type="text/javascript" src="textloader.js"></script>
 </body>
 

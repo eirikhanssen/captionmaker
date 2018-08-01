@@ -1,6 +1,6 @@
 function speedcontrols(){
     var video_el = document.querySelector('#videoElm');
-    console.log('speedcontrols');
+    //console.log('speedcontrols.js');
 
     var speedbuttons = document.querySelectorAll('button.speed');
 
