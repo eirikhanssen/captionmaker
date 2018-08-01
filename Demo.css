@@ -216,9 +216,12 @@ ul#loader li.added {
     text-decoration: line-through;
 }
 ul#loader li:hover {
-    background:#333;
-    color:white;
+    background:#333 !important;
+    color:white !important;
 }
+
+ul#loader li:not(.added) {font-size:1.5rem; background-color: magenta; color: black;}
+ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: rgb(206, 241, 245);}
 
 
 #textloader {
@@ -276,3 +279,5 @@ button.speed {
 }
 
 .load *{font-size: .8rem;}
+
+.hide {display:none};

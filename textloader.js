@@ -11,6 +11,10 @@ function textloader(){
     function loadTextLine(el) {
         var subtitle = el.innerHTML;
         $(el).addClass('added');
+        var prevPrev = el.previousElementSibling.previousElementSibling;
+        if(prevPrev) {
+            $(prevPrev).addClass('hide');
+        }
         pauseButton.click();
         window.setTimeout(function(){textCaptionEntry.value = subtitle;},200);
     }
@@ -49,6 +53,7 @@ function textloader(){
     textloader_button.addEventListener('click',loaderInit, false);
 }
 window.addEventListener('load',textloader,false);
+
 document.onkeypress = function(e) {
     var saveCaptionAndPlayButton = document.querySelector('#saveCaptionAndPlay');
     e = e || window.event;
