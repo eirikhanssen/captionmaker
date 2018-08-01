@@ -2450,7 +2450,7 @@ $Jeg er ikke flue, jeg er veps og kan stikke deg!
 ¶$De kjørte videre. 
 $– Blåbærblomster!
 ¶$– Hvis du spiser et blåbær, 
-$så har ei humle vært inni blomsten og befrukta den.
+$så har ei humle vært inni blomsten og bestøvet den.
 ¶$– Tusenvis av blåbær i skogen?
 ¶$– Ja, ei humle kan fly sju turer om dagen.  
 $Og hvor mange blomster besøker den på en sånn tur?
