@@ -3204,7 +3204,7 @@ $Den er en børstemark.
 $Hvis det kommer en fugl og tar den i nebbet, 
 $kan marken holde seg fast i gangen sin. 
 $Den har sterke muskler. 
-$Noen ganger er fuglen sterkest.
+$Men noen ganger er fuglen sterkest.
 ¶$– Er alle meitemarker like inni? 
 $lurte Jenny på.
 ¶$– Ja.
