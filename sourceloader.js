@@ -2941,7 +2941,7 @@ $Samir glemte å være stille.
 $– Den spiser en meitemark! 
 $sa han høyt.
 ¶$Jenny ble redd.
-¶$Hun og Samir og Hen og Katt var små! 
+¶$Hun og Samir og Hen og Katt var jo små! 
 $De var mindre enn dyret! 
 $De var mat!
 
