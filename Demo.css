@@ -1,4 +1,4 @@
-﻿body {
+﻿body 
     
 }
 
@@ -69,15 +69,8 @@ span#videoLength, span#elapsedTime {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    height: calc(100% - 10rem);
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b8e1fc+0,a9d2f3+10,90bae4+25,90bcea+37,90bff0+50,6ba8e5+51,a2daf5+83,bdf3fd+100;Blue+Gloss+%231 */
-    background: #b8e1fc; /* Old browsers */
-    background: -moz-linear-gradient(top,  #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', endColorstr='#bdf3fd',GradientType=0 ); /* IE6-9 */
-    height:4em;
-    margin-top: 1em;
+    height: 2em;
+    margin: 1em 0;
 }
 
 .videoError {
@@ -97,8 +90,6 @@ span#videoLength, span#elapsedTime {
 }
 
 #captionTitle {
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 #textCaptionEntry {
@@ -110,8 +101,11 @@ span#videoLength, span#elapsedTime {
     border: 1px solid #999;
     padding: 3px 8px 5px;
     text-align: center;
-    min-height: 50px;
+    min-height: 4rem;
+    margin-top: 8px;
     overflow: hidden;
+    font-size: 1.5rem;
+    padding-top: 1rem;
 }
 
 #textCaptionEntry.playing {
@@ -164,17 +158,22 @@ input[type=text] {
 
 #display {
     border: solid 1px #999;
-    height: calc(100% - 5.2rem);
-    max-height: 800px;
+    height: 507px;
     box-sizing: border-box;
     overflow: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-end;
+    margin-top:.5rem;
 }
 
 #display div {
     cursor: pointer;
     padding: 2px 0 3px 0;
     white-space: nowrap;
-    overflow: hidden;
+    font-size: 1.5em;
+    height: 2em;
 }
 
 #display div:nth-child(odd) {
@@ -187,6 +186,16 @@ input[type=text] {
 
 #display div:hover {
     background-color: #ECA809;
+    color:black;
+}
+
+body #display div:last-child {
+    color: #feffac;
+    font-weight: bold;
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
 }
 
 #display div span {
@@ -246,10 +255,8 @@ ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: 
     border:3px double #333;
     flex-grow:1;
     width:100%;
-    height:600px;
-    margin-top:.5rem;
+    height:500px;
     overflow-y:scroll;
-    
 }
 
 .keys {
@@ -281,4 +288,28 @@ button.speed {
 
 .load *{font-size: .8rem;}
 
-.hide {display:none};
+.hide {display:none;}
+
+section.media {position:relative;}
+
+#textloader_source {
+   width: 45%;
+   height: 1.5em;
+   position: absolute;
+   top: 0em;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+#textloader_button {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 25%;
+   height: 1.2em;
+   line-height: .7em;
+}
+
+.caption-list fieldset {
+margin-top: 1.7rem;
+}
