@@ -1389,7 +1389,9 @@ $Og som blir glad
 $Det er det jeg mener, sa Hen.
 ¶$– Og at frø må få lov til å spire, sa Samir.
 ¶$– Alt henger sammen med alt, sa Hen.
-¶$– Nå skal vi hjem og fortelle at på jorda er det mennesker som forstår det som er viktig å forstå.
+¶$– Nå skal vi hjem og fortelle 
+$at på jorda er det mennesker 
+$som forstår det som er viktig å forstå.
 
 #¶$– Det er ikke bare oss, sa Jenny.
 ¶$– Klassen vår, sa Samir.
@@ -3720,7 +3722,8 @@ $Alt er slutt!
 ¶$– Er det sant? 
 $sa Hen. 
 $– Det må vi undersøke!
-¶$– Min hypotese er at vi bare finner ei mus som skal fryse til is, sa Samir.
+¶$– Min hypotese er at vi bare finner ei mus 
+$som skal fryse til is, sa Samir.
 ¶$– Det er best at vi er små når vi undersøker, sa Hen. 
 $– Da kommer vi nærmere. 
 $Bli små!
@@ -3735,9 +3738,11 @@ $Hva var det jeg sa!
 ¶$– Men kan humler finne blomstersaft om vinteren, spurte Hen.
 ¶$– Nei, det er jo maten deres, sa Jenny.
 ¶$– Hva har denne humla gjort i sommer, spurte Hen.
-¶$– Flydd til mange tusen blomster og tatt med blomsterstøv, vel. 
+¶$– Flydd til mange tusen blomster 
+$og tatt med blomsterstøv, vel. 
 $Det visste Jenny.
-¶$– Ja, og hun har gitt mat til hundrevis av nye, små humler, sa Samir. 
+¶$– Ja, og hun har gitt mat 
+$til hundrevis av nye, små humler, sa Samir. 
 $– Og hun har passa på dronninga. 
 $Og dronninga har laget nye dronninger.
 
@@ -3748,7 +3753,8 @@ $Og dronninga har laget nye dronninger.
 ¶$– Og hva kan de gjøre når de våkner om våren?
 ¶$– De kan legge egg og lage nye humler!
 ¶$– Så hva har alt arbeidet til denne døde humla ført til?
-¶$– At humler lever videre, enda det blir vinter og ikke noe mat, ropte Samir.
+¶$– At humler lever videre, 
+$enda det blir vinter og ikke noe mat, ropte Samir.
 ¶$– OK, humler, men alt det andre dør, sa Jenny.
 ¶$– Er det sånn at høsten og vinteren gjemmer våren, spurte Samir.
 ¶$– Det kan du godt si, sa Hen. 
@@ -3757,11 +3763,21 @@ $– Det er for at naturen ikke skal fryse i stykker om vinteren
 
 #¶$– Det er det som er utvikling, sa Hen. 
 $– Evolusjon er et annet navn. 
-$Sakte, sakte, sakte, i millioner av år, har det vært noen insekter som har klart seg der det er kaldt, som hos dere i Norge. 
-$Kanskje de har hatt litt mer pels, kanskje de har ligget nedi bakken og ikke frosset i hjel, mens mange andre har dødd. 
+$Sakte, sakte, sakte, i millioner av år, 
+$har det vært noen insekter 
+$som har klart seg der det er kaldt, 
+$som hos dere i Norge. 
+$Kanskje de har hatt litt mer pels, 
+$kanskje de har ligget nedi bakken og ikke frosset i hjel, 
+$mens mange andre har dødd. 
 $Da får de som lever, nye barn. 
-$De som lever, har kanskje fått litt smartere kropper, og så får de flere barn. 
-$Så langt om lenge og lenger enn langt, i tusen år og millioner år, blir det sakte noen insekter og noen dyr som klarer seg i det kalde landet. 
+$De som lever, 
+$har kanskje fått litt smartere kropper, 
+$og så får de flere barn. 
+$Så langt om lenge og lenger enn langt, 
+$i tusen år og millioner år, 
+$blir det sakte noen insekter og noen dyr 
+$som klarer seg i det kalde landet. 
 $Det er evolusjon. 
 $Utvikling.
 
@@ -3775,18 +3791,23 @@ $– Hører du hvordan de roper og snakker sammen!
 $Jeg tror jeg skjønner det! 
 $«Jeg er sliten! 
 $Bytt plass!»
-¶$– Hen gikk bort til dammen, der Katt lå på isen og studerte en fisk.
+¶$– Hen gikk bort til dammen, 
+$der Katt lå på isen og studerte en fisk.
 ¶$Fuglene fløy ned mot bakken bak huset. 
 $Jenny og Samir gikk forsiktig bort dit. 
 $Gåseflokken gikk og spiste gress. 
 $– De spiser før de flyr videre, hvisket Samir. 
 $– Vi er små, vi går nærmere!
 
-#¶$– De skal sikkert til varmere land for å finne mat når det er vinter her, sa Jenny. 
+#¶$– De skal sikkert til varmere land 
+$for å finne mat når det er vinter her, sa Jenny. 
 $– Kanskje de kan ta med noen trær!
 ¶$– Tuller du, sa Samir.
 ¶$– Nei, jeg tuller ikke. 
-$Vi kan gi dem et frø fra bjørka, og hvis det spirer og blir et tre i Afrika, så får det mange tusen frø, og de kan bli mange trær.
+$Vi kan gi dem et frø fra bjørka, 
+$og hvis det spirer og blir et tre i Afrika, 
+$så får det mange tusen frø, 
+$og de kan bli mange trær.
 ¶$– Vi finner mer, sa Samir. 
 $– Vi gir dem en bukett med blomster! 
 $Jeg mener frø fra blomster!
@@ -3795,7 +3816,8 @@ $De bar frø bort til fuglene, fram og tilbake, og ingen så dem.
 $Nå var haugen med frø stor. 
 $Jenny listet seg bort til ei gås. 
 $Den bøyde seg ned for å nappe gress. 
-$Jenny tok et frø og klarte å putte det innimellom fjærene på vingen til gåsa. 
+$Jenny tok et frø og klarte å putte det 
+$innimellom fjærene på vingen til gåsa. 
 $Hun tok et til og et til. 
 $– Ta med trær, tenkte hun. 
 $– Ta med blomster.
@@ -3803,17 +3825,22 @@ $– Ta med blomster.
 #¶$Ei gås kom og spiste av haugen med frø. 
 $Ei gås til gjorde det samme.
 ¶$– Dette blir fint, sa Samir. 
-$– De kommer til å bæsje bjørk og selje og epletrær og geitrams og løvetann og hvitveis hele veien til Nord-Afrika og Iran!
+$– De kommer til å bæsje 
+$bjørk og selje og epletrær 
+$og geitrams og løvetann og hvitveis 
+$hele veien til Nord-Afrika og Iran!
 ¶$– Nei, det gjør de ikke.
 ¶$– Jo, de gjør de. 
 $Egentlig, så.
 ¶$Jenny ble plutselig i godt humør. 
 $– Vi blir med!
 ¶$– Tuller du?
-¶$– Nei, tenkt så gøy, vi kan bare gjemme oss i fjærene til gåsa! 
+¶$– Nei, tenkt så gøy, 
+$vi kan bare gjemme oss i fjærene til gåsa! 
 $Der er det varmt og godt, det har jeg lest!
 
-#¶$De listet seg bort til den nærmeste gåsa som fortsatt spiste gress og frø. 
+#¶$De listet seg bort til den nærmeste gåsa 
+$som fortsatt spiste gress og frø. 
 $Den kunne ikke se dem. 
 $– Vi klatrer oppover beina, sa Jenny. 
 $– Kom!
@@ -3822,13 +3849,17 @@ $– Jenny!
 $Samir! 
 $Bli store!
 ¶$De ble store. 
-$Fuglene skreik høyt, flakset med de store vingene og lettet og fløy vekk.
+$Fuglene skreik høyt, 
+$flakset med de store vingene 
+$og lettet og fløy vekk.
 ¶$Hen var også blitt stor. 
 $Hen kom bort til dem: 
-$– Jeg skjønner at det var fristende å bli med gjessene. 
+$– Jeg skjønner at det var fristende 
+$å bli med gjessene. 
 $Men det hadde vært farlig for dere. 
 $Det går an å falle av når vinden blåser. 
-$Det kan hende noen ikke klarer å fly så langt, de faller ned i havet. 
+$Det kan hende noen ikke klarer å fly så langt, 
+$de faller ned i havet. 
 $Så jeg måtte stoppe dere.
 ¶$– Ok, sa Jenny. 
 $– Ok, sa Samir.
@@ -3874,7 +3905,8 @@ $På en eller annen måte.`
 
 #¶$Det ble tidligere mørkt om kveldene. 
 $Det nærmet seg vinter. 
-$Jenny og Samir står ute og ser opp på den mørke, blå himmelen. 
+$Jenny og Samir står ute og ser opp 
+$på den mørke, blå himmelen. 
 $Den er full av stjerner. 
 $Hen og Katt er der også.
 
@@ -3886,10 +3918,13 @@ $Men jeg må si dere noe.
 $Katt og jeg må reise hjem. 
 $Vi må si farvel.
 ¶$– Nei, ikke reis! 
-$Vi har ikke kjørt med kula inne i fisk og ikke i fugl!
-¶$– Ikke i mennesker eller maur eller potetblomster heller, sa Jenny. 
+$Vi har ikke kjørt med kula 
+$inne i fisk og ikke i fugl!
+¶$– Ikke i mennesker eller maur 
+$eller potetblomster heller, sa Jenny. 
 $Dere kan sikkert bo hos oss!
-¶$– Tusen takk, men dere trenger ikke reise inn i fisk og potetblomst. 
+¶$– Tusen takk, men dere trenger ikke reise inn i 
+$fisk og potetblomst. 
 $Dere veit det viktigste allerede.
 ¶$– Hva mener du? 
 $sa Samir.
@@ -3898,12 +3933,16 @@ $– Dere skulle fortelle seinere.
 $Og nå er det blitt seinere.
 
 #¶$– Vi skal fortelle, sa Hen. 
-$– Men kanskje vi skal ta en siste tur med romskipet? 
+$– Men kanskje vi skal ta 
+$en siste tur med romskipet? 
 $For å se på stjernene på himmelen og på jorda?
 ¶$De gikk inn i glasskula og satte seg. 
-$Katt trykte på knappene i beltet sitt, og de steg til værs mot den mørke himmelen og stjernene.
+$Katt trykte på knappene i beltet sitt, 
+$og de steg til værs 
+$mot den mørke himmelen og stjernene.
 ¶$Under seg så de lysene fra alle vinduene. 
-$Mellom husene gikk det veier, og veiene hadde lamper som lyste. 
+$Mellom husene gikk det veier, 
+$og veiene hadde lamper som lyste. 
 $Både stjernene og lysene blinket litt.
 
 #¶$– Det er fint å se på, sa Samir. 
@@ -3919,16 +3958,21 @@ $Er det så mange slemme hos dere, spurte Jenny.
 ¶$– Nei, nei. 
 $Dette handler om planeten vår. 
 $Mo-lo. 
-$Den får lys fra ei sol som skinner med rødt lys. 
+$Den får lys fra ei sol 
+$som skinner med rødt lys. 
 $Sola er gammel. 
-$De fleste planetene i verdensrommet har slike gamle soler. 
+$De fleste planetene i verdensrommet 
+$har slike gamle soler. 
 $Vår sol har brent lenge. 
 $Derfor skinner den rødt. 
-$Det som lever på planeten vår, er ikke likt det som lever på planeten deres. 
-$På vår planet er alle opptatt av det som lever. 
+$Det som lever på planeten vår, 
+$er ikke likt det som lever på planeten deres. 
+$På vår planet er alle opptatt av 
+$det som lever. 
 $Vi passer på det. 
 $Men hvor lenge går det? 
-$Vi reiser til andre planeter, fordi vi lurer på: 
+$Vi reiser til andre planeter, 
+$fordi vi lurer på: 
 $Er det vann der? 
 $Hvor varmt er det? 
 $Hvor kaldt? 
@@ -3945,10 +3989,12 @@ $Slik så vi dere.
 ¶$– Ja, vi har fulgt med på planeten jorda. 
 $Vi har sterke apparater som vi kan se jorda med. 
 $Vi har sett at dere har alt. 
-$Vann, jord, stein, dyr, insekter, mennesker, fugler – alt. 
+$Vann, jord, stein, dyr, 
+$insekter, mennesker, fugler – alt. 
 $Og den er veldig vakker. 
 $Vi har lurt på: 
-$Er det noen mennesker på planeten jorda som forstår hvor fin den er? 
+$Er det noen mennesker på planeten jorda 
+$som forstår hvor fin den er? 
 $Som blir glade og begeistret og vil vite mer? 
 $Vi så at dere to, Jenny og Samir, forstår. 
 $Vi kom til dere.
@@ -3956,32 +4002,51 @@ $Vi kom til dere.
 #¶$– Forstår? 
 $spurte Samir og Jenny i munnen på hverandre. 
 $– Forstår hva da?
-¶$– Ja, som forstår hvordan alt er nødvendig og alt har en oppgave. 
+¶$– Ja, som forstår 
+$hvordan alt er nødvendig 
+$og alt har en oppgave. 
 $Og nå har dere sett mer. 
 $Dere har sett hvordan en meitemark er inni. 
 $Dere forstår hvordan den spiser og blander jord.
-¶$– Jeg hadde aldri trodd at de brune, små markene har lagd jorda på jorda, sa Jenny.
+¶$– Jeg hadde aldri trodd 
+$at de brune, små markene 
+$har lagd jorda på jorda, sa Jenny.
 ¶$– Nettopp. 
 $Det er det jeg mener, sa Hen.
-¶$– Jeg visste ikke at humlene og biene gjør sånn at vi får epler og tomater og blomster, sa Samir.
-¶$– Og jeg visste ikke at et frø er ei plante som lever videre, sa Jenny, og at frøet er både slutten og begynnelsen.
+¶$– Jeg visste ikke at humlene og biene 
+$gjør sånn at vi får 
+$epler og tomater og blomster, sa Samir.
+¶$– Og jeg visste ikke at et frø 
+$er ei plante som lever videre, sa Jenny, 
+$og at frøet er både slutten og begynnelsen.
 ¶$– Og at frø må få lov til å spire, sa Samir.
 
 #¶$– Alt henger sammen med alt, sa Hen. 
 $– Dere forstår det. 
 $Alt har en oppgave, alt betyr noe. 
-$Små bakterier som Risobium kan jo til og med hjelpe erteplanter med å lage proteiner, som kroppen til mennesker og dyr må ha.
+$Små bakterier som Risobium 
+$kan jo til og med hjelpe erteplanter 
+$med å lage proteiner, 
+$som kroppen til mennesker og dyr må ha.
 ¶$– Det er jo egentlig fantastisk, sa Jenny.
 ¶$– Veldig morsomt å tenke på, faktisk, sa Samir.
-¶$– Men jeg må jo også si, sa Hen, at sjøl om dere ikke trenger å reise sammen med Katt og meg inn i fisk og fugl og potetblomst for å forstå, så kan dere likevel lære hvordan fisk og fugl og potetblomst ser ut inni. 
+¶$– Men jeg må jo også si, sa Hen, 
+$at sjøl om dere ikke trenger 
+$å reise sammen med Katt og meg 
+$inn i fisk og fugl og potetblomst 
+$for å forstå, så kan dere likevel lære 
+$hvordan fisk og fugl og potetblomst ser ut inni. 
 $Dere finner ut hvordan.
 
-#¶$– Nå skal vi hjem og fortelle at på jorda er det mennesker som forstår det som er viktig å forstå.
+#¶$– Nå skal vi hjem og fortelle 
+$at på jorda er det mennesker 
+$som forstår det som er viktig å forstå.
 ¶$– Det er ikke bare oss, sa Jenny.
 ¶$– Klassen vår, sa Samir.
 ¶$– Og mange andre, sa Jenny.
 ¶$– Ja, det er virkelig bra, sa Hen. 
-$– Vi vil takke dere for at dere har vært så hyggelige mot oss fremmede. 
+$– Vi vil takke dere 
+$for at dere har vært så hyggelige mot oss fremmede. 
 $Tusen takk.
 ¶$– Dere er ikke fremmede mer nå, sa Samir.
 
@@ -3993,8 +4058,10 @@ $– Vi takker dere, sa Katt.
 $– Dere skal få en gave.
 ¶$Katt holdt et skrin i hendene. 
 $Det var så fint. 
-$Det blinket og strålte og så ut som sølv og gull og perler og diamanter.
-¶$– Dere får skrinet nå, men dere må vente med å åpne det til vi har reist.
+$Det blinket og strålte 
+$og så ut som sølv og gull og perler og diamanter.
+¶$– Dere får skrinet nå, 
+$men dere må vente med å åpne det til vi har reist.
 ¶$– Å! 
 $Tusen takk! 
 $Ååååå! 
