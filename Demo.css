@@ -165,6 +165,7 @@ input[type=text] {
 #display {
     border: solid 1px #999;
     height: calc(100% - 5.2rem);
+    max-height: 800px;
     box-sizing: border-box;
     overflow: auto;
 }
