@@ -2,8 +2,6 @@
 {
     position: relative;
     margin: 0px auto 0px auto;
-    min-width: 960px;
-    max-width: 1080px;
     padding: 0px 40px 0px 40px;
 }
 
@@ -15,10 +13,16 @@
 
 #DemoTitle
 {
-    padding: 40px 0px 0px 0px;
-    font-size: 24pt;
-    font-weight: normal;
+    padding: 0;
+    padding-top: .25em;
+    font-size: 1rem;
+    font-weight: bold;
     color: #00a3ef;
+}
+
+h2 {
+    color: maroon;
+    font-size: 1rem;
 }
 
 #DemoIntroduction
@@ -28,7 +32,7 @@
 
 #DemoContent
 {
-    margin: 30px 0px 0px 0px;
+    margin: .25em 0px 0px 0px;
 }
 
 #DemoDetails
@@ -52,4 +56,29 @@
 #DemoReturnButton:hover
 {
     background-image: url('../../Includes/Image/ReturnButtonHover.png');
+}
+
+.cols {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.cols > * {
+    width: calc(50% - .5em);
+}
+
+.rows {
+    display:flex;
+    flex-flow: column nowrap;
+}
+
+.rows > * {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.rows > * + * {
+    margin-top: .5em;
 }

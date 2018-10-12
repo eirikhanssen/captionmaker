@@ -81,6 +81,7 @@
 
     //  sets the video source to the URL s
     function LoadVideoSource(s) {
+        console.log(s);
         ResetState();
 
         if (!errorHandlerBound) {
@@ -128,22 +129,8 @@
     }, false);
 
     $("#loadVideoFromUrl").click(function() {
+        console.log('#loadVideoFromUrl clicked!');
         LoadVideoSource($("#videoURL").val());
-    });
-
-    $("#loadSampleVideo").click(function() {
-        var url = null;
-        var vid = $("#videoElm").get(0);
-        if (vid.canPlayType("video/mp4")) {
-            url = "/ieblog/2011/nov/pp4_blog_demo.mp4";
-        } else if (vid.canPlayType("video/webm")) {
-            url = "/ieblog/2011/nov/pp4_blog_demo.webmvp8.webm";
-        }
-
-        if (url) {
-            $("#videoURL").val(url);
-            $("#loadVideoFromUrl").click();
-        }
     });
 
     function LoadCaptionFile(fileObject) {

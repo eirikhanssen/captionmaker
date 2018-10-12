@@ -47,3 +47,59 @@ b, strong, .bold, h1, h2, h3, h4, h5, h6
 {
     font-weight: 600;
 }
+
+code {
+    display: block; font-family: Consolas, Monospace; font-size: 14px; color: Black; text-indent: -4em; padding: 0 0.25em;
+}
+
+.info {display:none;}
+
+.fieldset-groups {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.fieldset-group {
+    border-radius: .5em;
+    flex-grow: 1;
+    max-width: 50%;
+}
+
+.fieldset-group-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+label {font-weight: bold; color:#555;}
+
+.fieldset-group-center > * {
+    margin: 0 .5em;
+}
+
+.flexr-end {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+.work-area {
+    margin-top: 1em;
+    min-height:800px;
+}
+
+section.output {
+    margin-top:1rem;
+}
+
+section.output > * + *{
+    margin-top: 1rem;
+}
+
+.current-speed {
+    background-color: #4a054a;
+    border: 1px solid #333;
+    box-shadow: 0 1.5em 2em #b962b9 inset;
+    color: white;
+}

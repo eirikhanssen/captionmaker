@@ -1,5 +1,5 @@
-﻿body {
-    max-width: 1200px;
+﻿body 
+    
 }
 
 #warning {
@@ -46,7 +46,7 @@ tr.hidden td, tr.hidden td * {
 button {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    min-width: 76px;
+    min-width: 4em;
 }
 
 input[type=radio], input[type=checkbox] {
@@ -69,7 +69,8 @@ span#videoLength, span#elapsedTime {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    min-height: 297px;
+    height: 15em;
+    margin: 1em 0;
 }
 
 .videoError {
@@ -89,8 +90,6 @@ span#videoLength, span#elapsedTime {
 }
 
 #captionTitle {
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 #textCaptionEntry {
@@ -102,8 +101,11 @@ span#videoLength, span#elapsedTime {
     border: 1px solid #999;
     padding: 3px 8px 5px;
     text-align: center;
-    min-height: 50px;
+    min-height: 4rem;
+    margin-top: 8px;
     overflow: hidden;
+    font-size: 1.5rem;
+    padding-top: 1rem;
 }
 
 #textCaptionEntry.playing {
@@ -156,17 +158,22 @@ input[type=text] {
 
 #display {
     border: solid 1px #999;
-    height: 374px;
-    -moz-box-sizing: border-box;
+    height: 507px;
     box-sizing: border-box;
     overflow: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-end;
+    margin-top:.5rem;
 }
 
 #display div {
     cursor: pointer;
     padding: 2px 0 3px 0;
     white-space: nowrap;
-    overflow: hidden;
+    font-size: 1.5em;
+    height: 2em;
 }
 
 #display div:nth-child(odd) {
@@ -179,6 +186,16 @@ input[type=text] {
 
 #display div:hover {
     background-color: #ECA809;
+    color:black;
+}
+
+body #display div:last-child {
+    color: #feffac;
+    font-weight: bold;
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
 }
 
 #display div span {
@@ -189,4 +206,110 @@ input[type=text] {
 
 #display div span:nth-child(3) {
     font-style: italic;
+}
+
+ul#loader {
+    list-style-type: none;
+    padding-left:0;
+    padding-bottom:30em;
+}
+ul#loader li {
+    background-color: rgb(206, 241, 245);
+    padding:.25em;
+    margin: 5px 0;
+    font-size: 1.25em;
+}
+
+ul#loader li.added {
+    font-style: italic;
+    background-color: #eee;
+    text-decoration: line-through;
+}
+ul#loader li:hover {
+    background:#333 !important;
+    color:white !important;
+}
+
+ul#loader li:not(.added) {font-size:1.5rem; background-color: magenta; color: black;}
+ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: rgb(206, 241, 245);}
+
+
+#textloader {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top:.5rem;
+    
+}
+
+#textloader_source, #textloader_button{
+    height:1.5em;
+    margin:0;
+    padding:0;
+    border:3px double #333;
+    line-height:1em;
+    width:calc(50% - .5rem);
+    box-sizing:border-box;
+}
+#textloader_subs {
+    border:3px double #333;
+    flex-grow:1;
+    width:100%;
+    height:500px;
+    overflow-y:scroll;
+}
+
+.keys {
+    color:black;
+    line-height:1em;
+    font-weight:bold;
+    position:relative;
+    top:-.5em;
+}
+
+.flexr {
+    display:flex;
+    width:100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.flexr > * + *{
+    margin-left: .25em;
+}
+.flexr > * + label {
+    margin-left: 1em;
+}
+label {line-height: 1.8em;}
+button.speed {
+    margin-top:.25em;
+}
+
+.load *{font-size: .8rem;}
+
+.hide {display:none;}
+
+section.media {position:relative;}
+
+#textloader_source {
+   width: 45%;
+   height: 1.5em;
+   position: absolute;
+   top: 0em;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+#textloader_button {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 25%;
+   height: 1.2em;
+   line-height: .7em;
+}
+
+.caption-list fieldset {
+margin-top: 1.7rem;
 }
