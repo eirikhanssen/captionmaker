@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <!-- Copyright � Microsoft Corporation. All Rights Reserved. -->
+    <head>
     <!-- Demo Author: Jay Munro, Microsoft Corporation -->
     <!-- Written by Jay Munro -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Adapted by Eirik Hanssen -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>HTML5 Video Caption Maker (modified)</title>
-    <link href="BaseStyles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="Includes/Styles/DemoTemplate.css" />
-    <link rel="stylesheet" type="text/css" href="Includes/Styles/ReturnAndShareControls.css" />
-    <link rel="stylesheet" type="text/css" href="Demo.css" />
-    <link rel="shortcut icon" href="Includes/Image/FavIcon.ico" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-</head>
+    <link href="BaseStyles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="Includes/Styles/DemoTemplate.css">
+    <link rel="stylesheet" type="text/css" href="Includes/Styles/ReturnAndShareControls.css">
+    <link rel="stylesheet" type="text/css" href="Demo.css">
+    <link rel="shortcut icon" href="Includes/Image/FavIcon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="chrome-extension://dagdlcijhfbmgkjokkjicnnfimlebcll/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://dagdlcijhfbmgkjokkjicnnfimlebcll/page_context.js"></script></head>
 
-<body onload="init();">
+<body onload="init();" screen_capture_injected="true" cz-shortcut-listen="true">
     <main>
         <div id="ReturnAndShareControls"></div>
-       <!-- <h1 id="DemoTitle">HTML5 Video Caption Maker</h1> -->
+       <h1 id="DemoTitle">HTML5 Video Caption Maker</h1>
         <div id="DemoContent">
             <div class="cols load">
-                <fieldset>
+                <fieldset style="margin-right:.25rem">
                     <legend>load media</legend>
                     <div class="fieldset-groups">
                         <div class="flexr">
                             <label for="videoURL">URL:</label>
-                            <select id="audioloader"></select>
-                            <input type="text" id="videoURL" maxlength="2083" style="flex-grow: 1;"/>
+                            <input type="text" id="videoURL" maxlength="2083" style="flex-grow: 1;">
                             <button id="loadVideoFromUrl">Load</button>
                         </div>
                         <!--.fieldset-group-->
                         <div class="fieldset-group" style="display:none;">
                             <label for="videoFile">Disk:</label>
-                            <input type="file" id="videoFile" accept="video/mp4, video/webm" />
+                            <input type="file" id="videoFile" accept="video/mp4, video/webm">
                         </div>
                     </div><!--.fieldset-groups-->
 
                 </fieldset>
 
 
-                <fieldset>
+                <fieldset style="margin-left:.25rem">
                     <legend>load caption file (optional)</legend>
                     <div class="fieldset-groups">
                         <div class="flexr">
                             <div class="cols">
                                 <div class="col" style="display: flex; flex-flow: row-wrap;">
                                     <label for="ttURL">URL:</label>
-                                    <input type="text" id="ttURL" maxlength="2083" style="flex-grow:1;"/>
+                                    <input type="text" id="ttURL" maxlength="2083">
                                     <button id="loadCaptionFileFromUrl" style="margin-left: 3px;">Load</button></div>
                                 <div class="col">
                                     <label for="ttFile">Disk:</label>
-                                    <input type="file" id="ttFile" value="hei" accept="text/vtt, application/ttml+xml" /></div>
+                                    <input type="file" id="ttFile" value="hei" accept="text/vtt, application/ttml+xml"></div>
                             </div>
                             
                         </div>
@@ -67,21 +65,43 @@
                     <h2>Media</h2>
                     
                     <div id="textloader">
-                        <textarea id="textloader_source"></textarea>
+    
+    <textarea id="textloader_source" placeholder="Paste transcript here -- one line per cue."></textarea>
                         <button id="textloader_button">Load text for sync</button>
                         <div id="textloader_subs">
-                            <ul id="loader"><li>sample</li><li>line</li></ul>
+                            <ul id="loader">
+                                <li>lines from transcript will be</li>
+                                <li>loaded here as cues to be </li>
+                                <li>timed/synced to media</li>
+                            </ul>
                         </div>
-                        <video id="videoElm"></video>
+                        <video id="videoElm" src=""></video>
                     </div>
-                    <div id="captionTitle"></div>
-                    <textarea id="textCaptionEntry"></textarea>
-                    <fieldset>
+                    <div id="captionTitle">Pause to enter caption for segment from 00:00.000 to 00:00.000:</div>
+                    <textarea id="textCaptionEntry" readonly="" style=""></textarea>
+                </section>
+
+                <section class="caption-list">
+                    <h2>Caption List</h2>
+                    <div id="display"></div>
+                    <fieldset class="caption-controls">
+                        <legend>Caption Controls</legend>
+                        <div class="flexr-end">
+                            <button id="clearAllCaptions" title="clear all">Clear all <i class="material-icons">clear</i></button>
+                        </div>
+
+                    </fieldset>
+                </section>
+            </div>
+            <!--.cols-->
+
+            <section class="subtitle-controls">
+<fieldset>
                         <legend>Media Controls</legend>
                         <div class="cols">
                             <div class="fieldset-group-center">
                                 <button class="speed" data-speed=".5" title="speed: 0.5">0.5</button>
-                                <button class="speed" data-speed="1" title="speed: 1">1.0</button>
+                                <button class="speed current-speed" data-speed="1" title="speed: 1">1.0</button>
                                 <button class="speed" data-speed="1.5" title="speed: 1.5">1.5</button>
                                 <button class="speed" data-speed="1.8" title="speed: 1.8">1.8</button>
                                 <button class="speed" data-speed="2" title="speed: 2">2.0</button>
@@ -110,43 +130,26 @@
                         </div>
                         <!--.cols-->
                     </fieldset>
-                </section>
-
-                <section class="caption-list">
-                    <h2>Caption List</h2>
-                    <div id="display"></div>
-                    <fieldset>
-                        <legend>Caption Controls</legend>
-                        <div class="flexr-end">
-                            <button id="clearAllCaptions" title="clear all">Clear all <i class="material-icons">clear</i></button>
-                        </div>
-
-                    </fieldset>
-                </section>
-            </div>
-            <!--.cols-->
-
-            <section class="output">
+</section>
+<section class="output">
                 <h2>Output</h2>
                 <fieldset>
                     <legend>Choose caption file format</legend>
-                    <input type="radio" name="captionFormat" id="captionFormatTTML" style="margin-left: 0.5em;" />
+                    <input type="radio" name="captionFormat" id="captionFormatTTML" style="margin-left: 0.5em;">
                     <label for="captionFormatTTML">TTML</label>
-                    <input type="radio" name="captionFormat" id="captionFormatVTT" style="margin-left: 0.5em;" />
+                    <input type="radio" name="captionFormat" id="captionFormatVTT" style="margin-left: 0.5em;">
                     <label for="captionFormatVTT">WebVTT</label>
-                    <input type="radio" name="captionFormat" id="captionFormatNone" style="margin-left: 0.5em;" />
+                    <input type="radio" name="captionFormat" id="captionFormatNone" style="margin-left: 0.5em;">
                     <label for="captionFormatNone">Hide caption file display</label>
                 </fieldset>
-                <textarea id="captionFile" style="width: 100%;" rows="12" readonly="readonly"></textarea>
-                <button id="blobBuilderSave" style="margin-right: 2em;">Save to File</button>
-                <button id="copyToClipboard">Copy to Clipboard</button>
+                <textarea id="captionFile" style="width: 1706px; margin: 16px 0px; height: 144px;" rows="12" readonly="readonly"></textarea>
+                <button id="blobBuilderSave" style="margin-right: 2em; display: none;">Save to File</button>
+                <button id="copyToClipboard" style="display: none;">Copy to Clipboard</button>
             </section>
-            <div id="captionFileAndMarkup" style=" margin-top: 1rem; padding-top: 24px; padding-bottom: 24px;"></div>
+            <div id="captionFileAndMarkup" style="margin-top: 1rem; padding-top: 24px; padding-bottom: 24px; display: block;"></div>
         </div>
         <!--DemoContent-->
-
     </main>
-
     
     <!-- end of demo content -->
     <!--<script src="https://ajax.Microsoft.com/ajax/jQuery/jquery-1.7.1.min.js" type="text/javascript"> </script>-->
@@ -157,6 +160,4 @@
     <script type="text/javascript" src="speedcontrols.js"></script>
     <script type="text/javascript" src="sourceloader.js"></script>
     <script type="text/javascript" src="textloader.js"></script>
-</body>
-
-</html>
+</body></html>

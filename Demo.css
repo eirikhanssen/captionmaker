@@ -1,6 +1,4 @@
-﻿body 
-    
-}
+﻿body {}
 
 #warning {
     padding: 8px;
@@ -69,8 +67,8 @@ span#videoLength, span#elapsedTime {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    height: 15em;
-    margin: 1em 0;
+    height: 20rem;
+    margin: .5rem 0;
 }
 
 .videoError {
@@ -86,7 +84,7 @@ span#videoLength, span#elapsedTime {
 }
 
 #videoError {
-	display: none;
+    display: none;
 }
 
 #captionTitle {
@@ -95,17 +93,21 @@ span#videoLength, span#elapsedTime {
 #textCaptionEntry {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: 3rem;
     line-height: 19px;
-    border: 1px solid #999;
+    /* border: 1px solid #999; */
     padding: 3px 8px 5px;
     text-align: center;
     min-height: 4rem;
     margin-top: 8px;
     overflow: hidden;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     padding-top: 1rem;
+    background: #333;
+    box-sizing: border-box;
+    color:  white;
+    font-size: 2rem;
 }
 
 #textCaptionEntry.playing {
@@ -143,7 +145,8 @@ input[type=text] {
 }
 
 #videoURL, #ttURL {
-    width: 225px;
+    /* width: 225px; */
+    flex-grow: 1;
 }
 
 #captionFileAndMarkup {
@@ -152,13 +155,21 @@ input[type=text] {
 
 #captionFile {
     font-family: Consolas, monospace;
+    border: 5px dashed #777;
+    width:100%;
+    margin:1rem 0;
+    box-sizing:border-box;
+    padding: 1rem;
+    width: 100% !important;
+    min-height: 9rem !important;
+
 }
 
 /* the list of captions */
 
 #display {
     border: solid 1px #999;
-    height: 507px;
+    height: 47.5rem;
     box-sizing: border-box;
     overflow: auto;
     overflow-x: hidden;
@@ -200,8 +211,8 @@ body #display div:last-child {
 
 #display div span {
     margin-left: 1em;
-	display: inline-block;
-	vertical-align: top;
+    display: inline-block;
+    vertical-align: top;
 }
 
 #display div span:nth-child(3) {
@@ -239,24 +250,23 @@ ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: 
     flex-flow: row wrap;
     justify-content: space-between;
     margin-top:.5rem;
-    
+    min-height: 3rem;
 }
 
 #textloader_source, #textloader_button{
-    height:1.5em;
     margin:0;
     padding:0;
     border:3px double #333;
-    line-height:1em;
-    width:calc(50% - .5rem);
     box-sizing:border-box;
+    width: 100%;
 }
 #textloader_subs {
     border:3px double #333;
     flex-grow:1;
     width:100%;
-    height:500px;
+    height: 20rem;
     overflow-y:scroll;
+    box-sizing: border-box;
 }
 
 .keys {
@@ -293,23 +303,44 @@ button.speed {
 section.media {position:relative;}
 
 #textloader_source {
-   width: 45%;
-   height: 1.5em;
-   position: absolute;
-   top: 0em;
-   left: 50%;
-   transform: translateX(-50%);
+   display: inline-block;
+   font-size: .75rem;
+   width: 100% !important;
+   padding: .25em .5em;
+   min-height: 3rem;
 }
 
 #textloader_button {
-   position: absolute;
-   top: 0;
-   right: 0;
-   width: 25%;
-   height: 1.2em;
-   line-height: .7em;
+   width: 5rem;
+   height: 3rem;
+   line-height: 1.25em;
+   position: static;
+   flex-grow: 1;
+   margin-top: .5rem;
+   margin-bottom: .5rem;
 }
 
 .caption-list fieldset {
 margin-top: 1.7rem;
+}
+
+.flexc{
+    display:flex;
+    flex-flow: row wrap;
+    background-color: red;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.flexc button {
+    flex-grow: 1;
+}
+
+#clearAllCaptions {
+    line-height:2rem;
+    font-size: 2rem;
+}
+.caption-controls {
+    height:3.2rem;
+    box-sizing:content-box;
 }
