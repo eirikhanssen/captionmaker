@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>HTML5 Video Caption Maker (modified)</title>
+    <title>HTML5 Audio/video caption maker (adapted)</title>
     <link href="BaseStyles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="Includes/Styles/DemoTemplate.css">
     <link rel="stylesheet" type="text/css" href="Includes/Styles/ReturnAndShareControls.css">
@@ -19,7 +19,7 @@
 <body onload="init();" screen_capture_injected="true" cz-shortcut-listen="true">
     <main>
         <div id="ReturnAndShareControls"></div>
-       <h1 id="DemoTitle">HTML5 Video Caption Maker</h1>
+       <h1 id="DemoTitle">HTML5 Audio/video caption maker (adapted)</h1>
         <div id="DemoContent">
             <div class="cols load">
                 <fieldset style="margin-right:.25rem">
@@ -70,9 +70,12 @@
                         <button id="textloader_button">Load text for sync</button>
                         <div id="textloader_subs">
                             <ul id="loader">
-                                <li>lines from transcript will be</li>
-                                <li>loaded here as cues to be </li>
-                                <li>timed/synced to media</li>
+                                <li>Paste a transcript in the text field above. Edit if needed.</li>
+                                <li>Push the <b>Load text for sync</b> button to load transcript here.</li>
+                                <li><b>clicking</b> a line here pauses the media and adds it to the new cue below.</li>
+                                <li>Edit the cue if you wish, then press the <b>NEW</b> button to add as a timed cue.</li>
+                                <li>When done, scroll down to <b>Output</b> and choose a caption file format.</li>
+                                <li><b>Copy</b> the text and <b>save</b> to a file on your device.</li>
                             </ul>
                         </div>
                         <video id="videoElm" src=""></video>
@@ -87,7 +90,7 @@
                     <fieldset class="caption-controls">
                         <legend>Caption Controls</legend>
                         <div class="flexr-end">
-                            <button id="clearAllCaptions" title="clear all">Clear all <i class="material-icons">clear</i></button>
+                            <button id="clearAllCaptions" title="clear all">clear all captions</button>
                         </div>
 
                     </fieldset>
@@ -100,17 +103,7 @@
                         <legend>Media Controls</legend>
                         <div class="cols">
                             <div class="fieldset-group-center">
-                                <button class="speed" data-speed=".5" title="speed: 0.5">0.5</button>
-                                <button class="speed current-speed" data-speed="1" title="speed: 1">1.0</button>
-                                <button class="speed" data-speed="1.5" title="speed: 1.5">1.5</button>
-                                <button class="speed" data-speed="1.8" title="speed: 1.8">1.8</button>
-                                <button class="speed" data-speed="2" title="speed: 2">2.0</button>
-                                <button class="speed" data-speed="2.5" title="speed: 2.5">2.5</button>
-                                <button class="speed" data-speed="3" title="speed: 3">3.0</button>
-                                <button class="speed" data-speed="4" title="speed: 4">4.0</button>
-                            </div>
-                            <!--.fieldset-group-center-->
-                            <div class="fieldset-group-center">
+                                <label><b>play/pause/add:</b></label>
                                 <button id="playButton" title="Play media">
                                     <i class="material-icons">play_arrow</i>
                                 </button>
@@ -118,15 +111,31 @@
                                     <i class="material-icons">pause</i>
                                 </button>
                                 <button id="justSaveCaption" title="Save cue">
-                                    <i class="material-icons">fiber_new</i>
+                                    <b>save cue</b>
                                 </button>
                                 <button id="saveCaptionAndPlay" title="Save cue and continue - [|] key">
-                                    <i class="material-icons">fiber_new</i>
-                                    <i class="material-icons">replay</i>
+                                    <b>save cue and continue playback: [|] - key</b>
                                 </button>
 
                             </div>
                             <!--.fieldset-group-center-->
+                            <div class="fieldset-group-center">
+                                <label>playback rate:</label>
+                                <div style="flex-grow:1; display:flex; flex-flow: column-wrap;">
+                                    <button class="speed" data-speed=".5" title="speed: 0.25"><b>0.25</b></button>
+                                    <button class="speed" data-speed=".5" title="speed: 0.5"><b>0.5</b></button>
+                                    <button class="speed" data-speed=".5" title="speed: 0.75"><b>0.75</b></button>
+                                    <button class="speed current-speed" data-speed="1" title="speed: 1"><b>1.0</b></button>
+                                    <button class="speed" data-speed="1.5" title="speed: 1.5"><b>1.5</b></button>
+                                    <button class="speed" data-speed="1.8" title="speed: 1.75"><b>1.75</b></button>
+                                    <button class="speed" data-speed="2" title="speed: 2"><b>2.0</b></button>
+                                    <button class="speed" data-speed="2.5" title="speed: 2.5"><b>2.5</b></button>
+                                    <button class="speed" data-speed="3" title="speed: 3"><b>3.0</b></button>
+                                    <button class="speed" data-speed="4" title="speed: 4"><b>4.0</b></button>
+                                </div>
+                            </div>
+                            <!--.fieldset-group-center-->
+                            
                         </div>
                         <!--.cols-->
                     </fieldset>

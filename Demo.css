@@ -1,5 +1,9 @@
 ﻿body {}
 
+#DemoTitle {
+    font-size: 1em; font-weight: normal;
+}
+
 #warning {
     padding: 8px;
     background-color: yellow;
@@ -67,7 +71,7 @@ span#videoLength, span#elapsedTime {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    height: 20rem;
+    height: 18rem;
     margin: .5rem 0;
 }
 
@@ -169,7 +173,7 @@ input[type=text] {
 
 #display {
     border: solid 1px #999;
-    height: 47.5rem;
+    height: 44rem;
     box-sizing: border-box;
     overflow: auto;
     overflow-x: hidden;
@@ -264,7 +268,7 @@ ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: 
     border:3px double #333;
     flex-grow:1;
     width:100%;
-    height: 20rem;
+    height: 18rem;
     overflow-y:scroll;
     box-sizing: border-box;
 }
@@ -293,7 +297,17 @@ ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: 
 }
 label {line-height: 1.8em;}
 button.speed {
-    margin-top:.25em;
+    margin-top: .25em;
+    width: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: .25em;
+    align-items: center;
+    flex-grow: .25;
+}
+button.speed + button.speed {
+    margin-left:1em;
 }
 
 .load *{font-size: .8rem;}
@@ -337,10 +351,30 @@ margin-top: 1.7rem;
 }
 
 #clearAllCaptions {
-    line-height:2rem;
+    line-height:3rem;
     font-size: 2rem;
 }
 .caption-controls {
     height:3.2rem;
     box-sizing:content-box;
+}
+
+.subtitle-controls label {
+    line-height:3rem;
+}
+
+#saveCaptionAndPlay {
+    flex-grow: 1;
+}
+
+#clearAllCaptions {
+    line-height:1.5rem;
+    font-size: 1.25rem;
+    height: 2rem;
+    box-sizing: border-box;
+    color:white;
+    background:maroon;
+    border-radius: .15em;
+    border:none;
+    font-weight: bold;
 }

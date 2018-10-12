@@ -67,12 +67,15 @@
     ResetState();
 
     $("#clearAllCaptions").click(function () {
-        captionsArray.length = 0;
-        autoPauseAtTime = -1;
-        $("#display div").remove();
-        $("#captionTitle").html("&nbsp;");
-        $("#textCaptionEntry").val("");
-        $("#captionFormatNone").click();
+        if(confirm('Are you sure you want to delete all cues/captions?\n\n Press OK to clear the Caption List.\n Press Cancel to keep the Caption List.\n')){
+            captionsArray.length = 0;
+            autoPauseAtTime = -1;
+            $("#display div").remove();
+            $("#captionTitle").html("&nbsp;");
+            $("#textCaptionEntry").val("");
+            $("#captionFormatNone").click();    
+        }
+        
     });
 
     //  keep track of whether we've attached an error handler to the video element
