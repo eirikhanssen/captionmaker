@@ -98,8 +98,9 @@ section.output > * + *{
 }
 
 .current-speed {
-    background-color: #4a054a;
+
+    background-color: #fffd00;
     border: 1px solid #333;
-    box-shadow: 0 1.5em 2em #b962b9 inset;
-    color: white;
+    box-shadow: 0 1.5em 2em #4aff00 inset;
+    color: black;
 }

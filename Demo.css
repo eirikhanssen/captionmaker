@@ -46,9 +46,17 @@ tr.hidden td, tr.hidden td * {
 }
 
 button {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     min-width: 4em;
+    border-radius: 3px;
+    border: 1px solid #888;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #fffcc4;
+    box-shadow: 1px 1px 4px #777;
+    border-color: black;
 }
 
 input[type=radio], input[type=checkbox] {
@@ -260,10 +268,12 @@ ul#loader li:not(.added) + li:not(.added) {font-size:1.25rem; background-color: 
 #textloader_source, #textloader_button{
     margin:0;
     padding:0;
-    border:3px double #333;
     box-sizing:border-box;
     width: 100%;
 }
+
+#textloader_source {border:3px double #333;}
+
 #textloader_subs {
     border:3px double #333;
     flex-grow:1;
