@@ -69,7 +69,7 @@ span#videoLength, span#elapsedTime {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    height: 10em;
+    height: 15em;
     margin: 1em 0;
 }
 
